@@ -1,6 +1,11 @@
 <?php
 
-require_once "vendor/autoload.php";
+require_once 'vendor/autoload.php';
+require_once 'classes/Url.php';
+require_once 'classes/Request.php';
+require_once 'includes/functions.php';
+
+ref::config('maxDepth', 5);
 
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
