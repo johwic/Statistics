@@ -5,6 +5,10 @@ require_once 'classes/Url.php';
 require_once 'classes/Request.php';
 require_once 'includes/functions.php';
 
+if ( PHP_SAPI === 'cli' ) {
+    parse_str(implode('&', array_slice($argv, 1)), $_GET);
+}
+
 ref::config('maxDepth', 5);
 
 use Doctrine\ORM\Tools\Setup;

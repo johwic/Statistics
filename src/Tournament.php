@@ -96,7 +96,7 @@ class Tournament
      */
     public function setRegion(Region $region)
     {
-        $region->addTournament($this);
+        //$region->addTournament($this);
         $this->region = $region;
         
         return $this;

@@ -27,7 +27,7 @@ class Request {
     }
     
     public function execute() {
-        $this->result = curl_exec($this->ch);
+        $this->result = gzdecode(curl_exec($this->ch));
         $this->status_code = curl_getinfo($this->ch, CURLINFO_HTTP_CODE);
         return ( $this->result === false ) ? false : $this->status_code;
     }

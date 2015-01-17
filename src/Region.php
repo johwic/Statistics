@@ -19,6 +19,12 @@ class Region
      * @var int
      */
     protected $wsId;
+
+    /**
+     * @Column(type="integer", options={"unsigned"=true}, name="type")
+     * @var int
+     */
+    protected $type;
     
     /**
      * @Column(type="string", length=255, name="name")
@@ -49,13 +55,36 @@ class Region
     /**
      * Set wsId
      *
-     * @param int $wsId Whoscored.com id of the league
+     * @param int $wsId Whoscored.com id of the region
      * @return Region
      */
     public function setWsId($wsId)
     {
         $this->wsId = $wsId;
         
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return int
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Set type
+     *
+     * @param int $type Whoscored.com type of region
+     * @return Region
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
         return $this;
     }
     
