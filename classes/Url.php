@@ -41,7 +41,9 @@ class Url {
         'player-heatmap'                => '/Players/{id}/Heatmap',
         'match-centre'                  => '/matchesfeed/{id}/MatchCentre',
         'match-centre2'                 => '/matchesfeed/{id}/MatchCentre2',
-        'player-tournament-history-stat' => '/stageplayerstatfeed/{playerId}/PlayerHistoryTournamentStats'
+        'player-tournament-history-stat' => '/stageplayerstatfeed/{playerId}/PlayerHistoryTournamentStats',
+        'player-stats'                  => '/StatisticsFeed/1/GetPlayerStatistics',
+        'player-stats2'                  => '/StatisticsFeed/1/GetMatchCentrePlayerStatistics'
     ];
     
     public static function get($key, $parameters = []) {

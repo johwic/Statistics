@@ -1,0 +1,45 @@
+[
+    {
+        "filterName" : "AccurateCrosses",
+        "satisfier" : [{"func" : "hasSatisfier", "value" : "passCrossAccurate"}],
+        "callback"  : "setAccurateCrosses"
+    },
+    {
+        "filterName" : "AccurateLongBalls",
+        "satisfier" : [{"func" : "hasSatisfier", "value" : "passLongBallAccurate"}, {"func" : "isAnyOfTypes", "value" : [2]}],
+        "callback"  : "setAccurateLongBalls"
+    },
+    {
+        "filterName" : "AccuratePasses",
+        "satisfier" : [{"func" : "hasSatisfier", "value" : "passAccurate"}],
+        "callback"  : "setAccuratePasses"
+    },
+    {
+        "filterName" : "AccurateThroughBalls",
+        "satisfier" : [{"func" : "hasSatisfier", "value" : "passThroughBallAccurate"}],
+        "callback"  : "setAccurateThroughBalls"
+    },
+
+    {
+        "filterName" : "AerialLost",
+        "satisfier" : [{"func" : "hasSatisfier", "value" : "duelAerialLost"}],
+        "callback"  : "setAerialLost"
+    },
+    {
+        "filterName" : "AerialWon",
+        "satisfier" : [{"func" : "hasSatisfier", "value" : "duelAerialWon"}],
+        "callback"  : "setAerialWon"
+    },
+
+    {
+        "filterName" : "Assists",
+        "satisfier" : [{"func" : "hasSatisfier", "value" : "assist"}],
+        "callback"  : "setAerialLost"
+    },
+
+    {
+        "filterName" : "Dispossessed",
+        "satisfier" : [{"func" : "hasSatisfier", "value" : "dispossessed"}],
+        "callback"  : "setDispossessed"
+    }
+]
