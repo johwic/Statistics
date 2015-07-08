@@ -31,7 +31,7 @@ class Request {
         $this->status_code = curl_getinfo($this->ch, CURLINFO_HTTP_CODE);
         return ( $this->result === false ) ? false : $this->status_code;
     }
-    
+
     public function process($type = '') {
         if ( $type == 'array' ) {
             $array = eval('return ' . str_replace(array(',,', ',,'), array(',null,', ',null,'), $this->result) . ';');

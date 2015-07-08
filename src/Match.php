@@ -47,6 +47,28 @@ class Match
     protected $time;
 
     /**
+     * @Column(type="integer", options={"unsigned"=true}, name="status")
+     * @var int
+     */
+    protected $status;
+
+    /**
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param int $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    }
+
+    /**
      * Get id
      *
      * @return int

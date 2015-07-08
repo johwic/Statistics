@@ -79,6 +79,53 @@ class StageTeamStatistics
      * @var int
      */
     protected $accuratePasses;
+
+    /**
+     * @Column(type="smallint", options={"unsigned"=true}, name="accurate_corners_into_box")
+     * @var int
+     */
+    protected $accurateCornersIntoBox;
+
+    /**
+     * @return int
+     */
+    public function getAccurateCornersIntoBox()
+    {
+        return $this->accurateCornersIntoBox;
+    }
+
+    /**
+     * @param int $accurateCornersIntoBox
+     * @return StageTeamStatistics
+     */
+    public function setAccurateCornersIntoBox($accurateCornersIntoBox)
+    {
+        $this->accurateCornersIntoBox = $accurateCornersIntoBox;
+
+        return $this;
+    }
+
+    /**
+     * @Column(type="smallint", options={"unsigned"=true}, name="total_corners_into_box")
+     * @var int
+     */
+    protected $totalCornersIntoBox;
+
+    /**
+     * @return int
+     */
+    public function getTotalCornersIntoBox()
+    {
+        return $this->totalCornersIntoBox;
+    }
+
+    /**
+     * @param int $totalCornersIntoBox
+     */
+    public function setTotalCornersIntoBox($totalCornersIntoBox)
+    {
+        $this->totalCornersIntoBox = $totalCornersIntoBox;
+    }
     
     /**
      * @Column(type="smallint", options={"unsigned"=true}, name="aerial_won")
@@ -177,10 +224,16 @@ class StageTeamStatistics
     protected $offsides;
     
     /**
-     * @Column(type="smallint", options={"unsigned"=true}, name="corners")
+     * @Column(type="smallint", options={"unsigned"=true}, name="corners_won")
      * @var int
      */
-    protected $corners;
+    protected $cornersWon;
+
+    /**
+     * @Column(type="smallint", options={"unsigned"=true}, name="corners_lost")
+     * @var int
+     */
+    protected $cornersLost;
     
     /**
      * @Column(type="smallint", options={"unsigned"=true}, name="throws")
@@ -788,12 +841,12 @@ class StageTeamStatistics
     /**
      * Set corners
      *
-     * @param int $corners
+     * @param int $cornersWon
      * @return StageTeamStatistics
      */
-    public function setCorners($corners)
+    public function setCornersWon($cornersWon)
     {
-        $this->corners = $corners;
+        $this->cornersWon = $cornersWon;
     
         return $this;
     }
@@ -803,9 +856,32 @@ class StageTeamStatistics
      *
      * @return int 
      */
-    public function getCorners()
+    public function getCornersWon()
     {
-        return $this->corners;
+        return $this->cornersWon;
+    }
+
+    /**
+     * Set corners
+     *
+     * @param int $cornersLost
+     * @return StageTeamStatistics
+     */
+    public function setCornersLost($cornersLost)
+    {
+        $this->cornersLost = $cornersLost;
+
+        return $this;
+    }
+
+    /**
+     * Get cornersLost
+     *
+     * @return int
+     */
+    public function getCornersLost()
+    {
+        return $this->cornersLost;
     }
 
     /**
